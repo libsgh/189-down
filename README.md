@@ -1,7 +1,7 @@
 # 189-down
-天翼云网盘分享直链解析
+天翼云网盘分享直链解析，支持目录
 
-demo：[Github Pages版本](https://github.com/libsgh/PanIndex)
+demo：[Github Pages版本](https://pan-189.tk/)
 [cf workers版本](https://small-sun-fadd.noki.workers.dev/)
 
 ### 食用方法：
@@ -9,7 +9,7 @@ demo：[Github Pages版本](https://github.com/libsgh/PanIndex)
 2. 开启Github Pages
 3. 绑定域名（可选）
 4. enjoy it!
-> cf-workers也是可以部署的,复制[index.js](https://small-sun-fadd.noki.workers.dev/)
+> cf-workers也是可以部署的,复制[index.js](https://cdn.jsdelivr.net/gh/libsgh/189-down@main/index.js)
 
 ### 接口说明
 
