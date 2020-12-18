@@ -70,7 +70,7 @@ function getFolder(fileId, flag, pId){
 	    			  message: '请输入正确的分享链接和密码！'
 	    			});
 		    	}else{
-			    	location.href = data.replace('http','https');
+			    	location.href = data;
 		    	}
 		    }
 		  }
