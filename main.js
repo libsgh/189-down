@@ -35,7 +35,7 @@ function initFiles(d, flag, pId){
 			'		</li>';
 		}else{
 			initHtml += '<li class="mdui-list-item mdui-ripple">'+
-			'			<a href="https://cloud.189.cn/downloadFile.action?fileStr='+item.fileIdDigest+'&downloadType=1">'+
+			'			<a href="javascript:redirectDown(\''+item.fileIdDigest+'\')">'+
 			'			  <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">'+
 			'				<i class="mdui-icon material-icons">insert_drive_file</i>'+
 			'		    	'+item.fileName+
@@ -75,6 +75,16 @@ function getFolder(fileId, flag, pId){
 		    }
 		  }
 		});
+}
+function redirectDown(fileIdDigest){
+	$.ajax({
+		  method: 'GET',
+		  url: api,
+		  data: $.param({ fileIdDigest: fileIdDigest}),
+		  success: function (data) {
+	    	location.href = data;
+		  }
+	});
 }
 function isJSON(str) {
     if (typeof str == 'string') {
