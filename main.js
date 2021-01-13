@@ -35,7 +35,7 @@ function initFiles(d, flag, pId){
 			'		</li>';
 		}else{
 			initHtml += '<li class="mdui-list-item mdui-ripple">'+
-			'			<a href="javascript:redirectDown(\''+item.fileIdDigest+'\')">'+
+			'			<a href="javascript:redirectDown(\''+item.parentId+'\',\''+item.fileId+'\')">'+
 			'			  <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">'+
 			'				<i class="mdui-icon material-icons">insert_drive_file</i>'+
 			'		    	'+item.fileName+
@@ -76,11 +76,11 @@ function getFolder(fileId, flag, pId){
 		  }
 		});
 }
-function redirectDown(fileIdDigest){
+function redirectDown(fileId, subFileId){
 	$.ajax({
 		  method: 'GET',
 		  url: api,
-		  data: $.param({ fileIdDigest: fileIdDigest}),
+		  data: $.param({url: $("input[name=url]").val(), fileId: fileId, subFileId: subFileId, passCode: $("input[name=passCode]").val()}),
 		  success: function (data) {
 	    	location.href = data;
 		  }
