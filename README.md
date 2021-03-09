@@ -2,7 +2,7 @@
 天翼云网盘分享直链解析，支持目录
 
 demo：[Github Pages版本](https://pan-189.tk/)
-[cf workers版本](https://small-sun-fadd.noki.workers.dev/)
+[cf workers版本](https://pan.noki.workers.dev/)
 
 ### 食用方法：
 1. fork本项目
