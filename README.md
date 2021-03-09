@@ -21,6 +21,18 @@ demo：[Github Pages版本](https://pan-189.tk/)
 	```
 - 可以在`main.js`中替换自己的api地址，具体接口参数返回值，请查看源码
 
+### 测试分享链接
+* 无密码文件
+ * 链接：https://cloud.189.cn/t/aQjy6nBfUZJf
+* 密码文件
+ * 链接：https://cloud.189.cn/t/6zIBFnA32M3u
+ * 访问码：8h2j
+* 无密码文件夹
+ * 链接：https://cloud.189.cn/t/NbeiEfBzqee2
+* 密码文件夹
+ * 链接：https://cloud.189.cn/t/EJbeIf2In6zq
+ * 访问码：6lrv
+ 
 ### TODO List
 
 - [x] 支持更多网盘
