@@ -13,5 +13,14 @@ demo：[Github Pages版本](https://pan-189.tk/)
 
 ### 接口说明
 
-- 接口源自隔壁：[PanIndex](https://github.com/libsgh/PanIndex)
+- ~~接口源自隔壁：[PanIndex](https://github.com/libsgh/PanIndex)~~
+- 由于PanIndex支持多网盘模式，接口可能会失效，所以我将接口独立了出来
+
+	```
+	https://api.noki.top/pan/cloud189/shareToDown
+	```
 - 可以在`main.js`中替换自己的api地址，具体接口参数返回值，请查看源码
+
+### TODO List
+
+- [x] 支持更多网盘

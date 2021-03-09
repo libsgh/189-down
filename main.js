@@ -1,5 +1,5 @@
 var $ = mdui.$;
-var api = 'https://pan.noki.top/api/shareToDown';
+var api = 'https://api.noki.top/pan/cloud189/shareToDown';
 $("#downBtn").on('click', function (e) {
 	getFolder("", false, "");
 });
