@@ -7,7 +7,7 @@ const html = `<!DOCTYPE html>
 <meta name="renderer" content="webkit"/>
 <meta name="force-rendering" content="webkit"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-<link rel="shortcut icon" href="logo.ico">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/libsgh/189-down@main/logo.ico">
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
