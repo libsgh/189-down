@@ -63,7 +63,7 @@ function getFolder(fileId, flag, pId){
 		  success: function (data) {
 		    if(isJSON(data)){
 		    	var d = JSON.parse(data);
-		    	initFiles(d, flag, pId);
+		    	initFiles(d, flag, d.parentId);
 		    }else{
 		    	if(data == "https://cloud.189.cn/"){
 		    		mdui.snackbar({
