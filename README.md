@@ -19,7 +19,26 @@ demo：[Github Pages版本](https://pan-189.tk/)
 	```
 	https://api.noki.top/pan/cloud189/shareToDown
 	```
-- 可以在`main.js`中替换自己的api地址，具体接口参数返回值，请查看源码
+- 可以在`main.js`中替换自己的ap地址
+- 直接部署
+  下载 https://github.com/libsgh/189-down/releases/  下载api程序
+  解压
+  ```
+  $ nohup ./189-share-api -port=8080 &
+  ```
+- docker部署
+```
+docker stop 189-share-api
+docker rm 189-share-api
+docker run -itd \
+ --name 189-share-api \
+ -d -p 8080:8080 \
+ -e PORT=8080 \
+ -e cloud189_user=xxx \
+ -e cloud189_password=xxx \
+-e access_token=找我获取 \
+ iicm/189-share-api:latest
+```
 
 ### 测试分享链接
 * 无密码文件
