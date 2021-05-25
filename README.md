@@ -22,23 +22,34 @@ demo：[Github Pages版本](https://pan-189.tk/)
 - 可以在`main.js`中替换自己的ap地址
 - 直接部署
   下载 https://github.com/libsgh/189-down/releases/  下载api程序
+  设置环境变量
+  ```
+  $ vi /etc/profile
+  # export cloud189_user=xxx
+  # cloud189_password=xxx
+  # access_token=找我获取
+  $ source /etc/profile 
+  ```
   解压
   ```
+  $ echo
   $ nohup ./189-share-api -port=8080 &
   ```
 - docker部署
-```
-docker stop 189-share-api
-docker rm 189-share-api
-docker run -itd \
- --name 189-share-api \
- -d -p 8080:8080 \
- -e PORT=8080 \
- -e cloud189_user=xxx \
- -e cloud189_password=xxx \
--e access_token=找我获取 \
- iicm/189-share-api:latest
-```
+  ```
+  docker stop 189-share-api
+  docker rm 189-share-api
+  docker run -itd \
+  --name 189-share-api \
+  -d -p 8080:8080 \
+  -e PORT=8080 \
+  -e cloud189_user=xxx \
+  -e cloud189_password=xxx \
+  -e access_token=找我获取 \
+  iicm/189-share-api:latest
+  ```
+- 试用授权token，有效期至2021-06-25
+  `B6LXoFUmaPi8Rx6oyAafD1C+uKWKwE3M8pFBq2cApyinVs1UfZjIRms6PhVF4UPXvHL6nMzN6rge9FGTItrFhHvzylRMdgleFNzR6fgIUK600f+BJRXCVxQmkbQPPzgE9zPCaBShWEPsfRoOWc75ZKa0RE6uc5cYKuzc4PUx1UA=`
 
 ### 测试分享链接
 * 无密码文件
