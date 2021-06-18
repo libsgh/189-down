@@ -62,7 +62,8 @@ function getFolder(fileId, flag, pId){
 		  data: $.param({ url: $("input[name=url]").val(), passCode: $("input[name=passCode]").val(),fileId:fileId}),
 		  success: function (data) {
 		    if(isJSON(data)){
-		    	var d = JSON.parse(data);
+				var d = eval('(' + data + ')');
+		    	//var d = JSON.parse(data);
 		    	initFiles(d, flag, pId);
 		    }else{
 		    	if(data == "https://cloud.189.cn/"){
