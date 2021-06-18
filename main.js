@@ -61,8 +61,10 @@ function getFolder(fileId, flag, pId){
 		  url: api,
 		  data: $.param({ url: $("input[name=url]").val(), passCode: $("input[name=passCode]").val(),fileId:fileId}),
 		  success: function (data) {
+		  	console.log(data);
 		    if(isJSON(data)){
 				var d = eval('(' + data + ')');
+				console.log(d);
 		    	//var d = JSON.parse(data);
 		    	initFiles(d, flag, pId);
 		    }else{
