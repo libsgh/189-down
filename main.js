@@ -37,7 +37,7 @@ function initFiles(d, flag, pId){
 	//文件
 	$.each(d.fileListAO.fileList, function(i, item){
 		initHtml += '<li class="mdui-list-item mdui-ripple">'+
-			'			<a href="javascript:redirectDown(\''+pId+'\',\''+item.id+'\')">'+
+			'			<a href="javascript:redirectDown(\''+item.id+'\',\''+d.shareId+'\')">'+
 			'			  <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">'+
 			'				<i class="mdui-icon material-icons">insert_drive_file</i>'+
 			'		    	'+item.name+
@@ -51,7 +51,6 @@ function initFiles(d, flag, pId){
 }
 function getFolder(fileId, flag, pId){
 	var url = $("input[name=url]").val();
-	var passCode = $("input[name=url]").val();
 	if(url == ""){
 		mdui.snackbar({
 		  message: '您还没有输入分享链接！'
@@ -71,19 +70,33 @@ function getFolder(fileId, flag, pId){
 	    			  message: '请输入正确的分享链接和密码！'
 	    			});
 		    	}else{
-			    	location.href = data;
+					if (data == "400"){
+						//文件内容违规，下载失败
+						mdui.snackbar({
+							message: '文件内容违规，下载失败'
+						});
+					}else{
+						location.href = data;
+					}
 		    	}
 		    }
 		  }
 		});
 }
-function redirectDown(fileId, subFileId){
+function redirectDown(fileId, shareId){
 	$.ajax({
 		  method: 'GET',
 		  url: api,
-		  data: $.param({url: $("input[name=url]").val(), fileId: fileId, subFileId: subFileId, passCode: $("input[name=passCode]").val()}),
+		  data: $.param({url: $("input[name=url]").val(), fileId: fileId, shareId: shareId, passCode: $("input[name=passCode]").val()}),
 		  success: function (data) {
-	    	location.href = data;
+		  	if (data == "400"){
+		  		//文件内容违规，下载失败
+				mdui.snackbar({
+					message: '文件内容违规，下载失败'
+				});
+			}else{
+				location.href = data;
+			}
 		  }
 	});
 }
