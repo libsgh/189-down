@@ -21,30 +21,31 @@ function initFiles(d, flag, pId){
 		'		  	</a>'+
 		'		</li>';
 	}
-	$.each(d.data, function(i, item){
-		if(item.isFolder){
-			initHtml += '<li class="mdui-list-item mdui-ripple">'+
-			'			<a href="javascript:getFolder(\''+item.fileId+'\', true, \''+item.parentId+'\')">'+
+	//文件夹
+	$.each(d.fileListAO.folderList, function(i, item){
+		initHtml += '<li class="mdui-list-item mdui-ripple">'+
+			'			<a href="javascript:getFolder(\''+item.id+'\', true, \''+item.parentId+'\')">'+
 			'			  <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">'+
 			'				<i class="mdui-icon material-icons">folder_open</i>'+
-			'		    	'+item.fileName+
+			'		    	'+item.name+
 			'			  </div>'+
 			'			  <div class="mdui-col-sm-3 mdui-text-right">'+item.lastOpTime+'</div>'+
-			'			  <div class="mdui-col-sm-2 mdui-text-right">'+formatFileSize(item.fileSize)+'</div>'+
+			'			  <div class="mdui-col-sm-2 mdui-text-right">'+formatFileSize(0)+'</div>'+
 			'		  	</a>'+
 			'		</li>';
-		}else{
-			initHtml += '<li class="mdui-list-item mdui-ripple">'+
-			'			<a href="javascript:redirectDown(\''+item.parentId+'\',\''+item.fileId+'\')">'+
+	});
+	//文件
+	$.each(d.fileListAO.fileList, function(i, item){
+		initHtml += '<li class="mdui-list-item mdui-ripple">'+
+			'			<a href="javascript:redirectDown(\''+pId+'\',\''+item.id+'\')">'+
 			'			  <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">'+
 			'				<i class="mdui-icon material-icons">insert_drive_file</i>'+
-			'		    	'+item.fileName+
+			'		    	'+item.name+
 			'			  </div>'+
 			'			  <div class="mdui-col-sm-3 mdui-text-right">'+item.lastOpTime+'</div>'+
-			'			  <div class="mdui-col-sm-2 mdui-text-right">'+formatFileSize(item.fileSize)+'</div>'+
+			'			  <div class="mdui-col-sm-2 mdui-text-right">'+formatFileSize(item.size)+'</div>'+
 			'		  	</a>'+
 			'		</li>';
-		}
 	});
 	$("ul").html(initHtml);
 }
@@ -63,7 +64,7 @@ function getFolder(fileId, flag, pId){
 		  success: function (data) {
 		    if(isJSON(data)){
 		    	var d = JSON.parse(data);
-		    	initFiles(d, flag, d.parentId);
+		    	initFiles(d, flag, pId);
 		    }else{
 		    	if(data == "https://cloud.189.cn/"){
 		    		mdui.snackbar({
