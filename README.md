@@ -48,8 +48,8 @@ demo：[Github Pages版本](https://pan-189.tk/)
   -e access_token=找我获取 \
   iicm/189-share-api:latest
   ```
-- 试用授权token，有效期至2021-06-25
-  `B6LXoFUmaPi8Rx6oyAafD1C+uKWKwE3M8pFBq2cApyinVs1UfZjIRms6PhVF4UPXvHL6nMzN6rge9FGTItrFhHvzylRMdgleFNzR6fgIUK600f+BJRXCVxQmkbQPPzgE9zPCaBShWEPsfRoOWc75ZKa0RE6uc5cYKuzc4PUx1UA=`
+- 免费试用授权token，有效期至2021-09-21
+  `iaH6ZJhExoYO97RnlIVGvARC1W0+tPdn28//6h8cukpIeYlfSGWig3gm9h6061MeABy+eJrZuhfpH3fGqik4d+VFLN0j6qLFC5MSMZfn4oPLfMURtEQiegWzQ1oD4/s1QrNd3OLt2R+vBWS2ezdNQx0gmPpa3OVqvw8NvSftj0c=`
 
 ### 测试分享链接
 * 无密码文件
