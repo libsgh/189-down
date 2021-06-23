@@ -19,15 +19,15 @@ demo：[Github Pages版本](https://pan-189.tk/)
 	```
 	https://api.noki.top/pan/cloud189/shareToDown
 	```
-- 可以在`main.js`中替换自己的ap地址
+- 可以在`main.js`中替换自己的api地址
 - 直接部署
   下载 https://github.com/libsgh/189-down/releases/  下载api程序
   设置环境变量
   ```
   $ vi /etc/profile
   # export cloud189_user=xxx
-  # cloud189_password=xxx
-  # access_token=找我获取
+  # export cloud189_password=xxx
+  # export access_token=找我获取
   $ source /etc/profile 
   ```
   解压
