@@ -1,7 +1,7 @@
 # 189-down
 天翼云网盘分享直链解析，支持目录
 
-demo：[Github Pages版本](https://pan-189.tk/)
+demo：[Github Pages版本](https://libsgh.github.io/189-down/)
 [cf workers版本](https://pan.noki.workers.dev/)
 
 ### 食用方法：
@@ -16,9 +16,9 @@ demo：[Github Pages版本](https://pan-189.tk/)
 - ~~接口源自隔壁：[PanIndex](https://github.com/libsgh/PanIndex)~~
 - 由于PanIndex支持多网盘模式，接口可能会失效，所以我将接口独立了出来
 
-	```
-	https://api.noki.top/pan/cloud189/shareToDown
-	```
+    ```
+    https://api.noki.top/pan/cloud189/shareToDown
+    ```
 - 可以在`main.js`中替换自己的api地址
 - 直接部署
   下载 https://github.com/libsgh/189-down/releases/  下载api程序
@@ -48,8 +48,9 @@ demo：[Github Pages版本](https://pan-189.tk/)
   -e access_token=找我获取 \
   iicm/189-share-api:latest
   ```
-- 免费试用授权token，有效期至2021-09-21
-  `iaH6ZJhExoYO97RnlIVGvARC1W0+tPdn28//6h8cukpIeYlfSGWig3gm9h6061MeABy+eJrZuhfpH3fGqik4d+VFLN0j6qLFC5MSMZfn4oPLfMURtEQiegWzQ1oD4/s1QrNd3OLt2R+vBWS2ezdNQx0gmPpa3OVqvw8NvSftj0c=`
+- 免费试用授权token，有效期至2022-02-08
+  `Yt1mz7bUWMmWdEqnYdb7ZSOnrrxb828FczklEeBvVsfQxC6EBOtCDFLkjNRhmg8ODvTeuZhnRj0lRKHbcgClWsXOh0E4UTFZ0KQdhhZ9xae53OjglRTwd8LSuyHVJaDVfK+NvbyhDDJrss8lN2vodBxT1S6njRV5FIqqn12jOoQ=`
+
 
 ### 测试分享链接
 * 无密码文件
@@ -71,4 +72,4 @@ demo：[Github Pages版本](https://pan-189.tk/)
 
 ### TODO List
 
-- [x] 支持更多网盘
+- [x] 阿里云盘分享解析
